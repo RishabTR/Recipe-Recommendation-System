@@ -15,11 +15,11 @@
    <children>
       <VBox prefHeight="582.0" prefWidth="214.0">
          <children>
-            <AnchorPane fx:id="side_page" prefHeight="582.0" prefWidth="176.0" styleClass="side_page">
+            <AnchorPane fx:id="side_page" prefHeight="582.0" prefWidth="176.0" style="-fx-background-color: black;" styleClass="side_page">
                <children>
-                  <Button fx:id="homebutton" layoutX="32.0" layoutY="191.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Home" textFill="#ececec" />
-                  <Button fx:id="homebutton1" layoutX="34.0" layoutY="291.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Logout" textFill="#ececec" />
-                  <Button fx:id="homebutton11" layoutX="32.0" layoutY="242.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Help" textFill="#ececec" />
+                  <Button fx:id="home" layoutX="32.0" layoutY="191.0" mnemonicParsing="false" onAction="#OnClickHome" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Home" textFill="#ececec" />
+                  <Button fx:id="logout" layoutX="34.0" layoutY="291.0" mnemonicParsing="false" onAction="#OnClickLogout" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Logout" textFill="#ececec" />
+                  <Button fx:id="help" layoutX="32.0" layoutY="242.0" mnemonicParsing="false" onAction="#OnClickHelp" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Help" textFill="#ececec" />
                </children>
             </AnchorPane>
          </children>
@@ -55,12 +55,12 @@
                </image></ImageView>
             <Pane fx:id="pane1" layoutX="47.0" layoutY="189.0">
                <children>
-                  <CheckBox fx:id="chicken" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Chicken" />
-                  <CheckBox fx:id="beef" layoutY="18.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Beef" />
-                  <CheckBox fx:id="pork" layoutY="36.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Pork" />
-                  <CheckBox fx:id="lamb" layoutY="54.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Lamb" />
-                  <CheckBox fx:id="mutton" layoutY="72.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Mutton" />
-                  <CheckBox fx:id="duck" layoutY="90.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Duck" />
+                  <CheckBox fx:id="chicken" mnemonicParsing="false" text="Chicken" />
+                  <CheckBox fx:id="beef" layoutY="18.0" mnemonicParsing="false" text="Beef" />
+                  <CheckBox fx:id="pork" layoutY="36.0" mnemonicParsing="false" text="Pork" />
+                  <CheckBox fx:id="lamb" layoutY="54.0" mnemonicParsing="false" text="Lamb" />
+                  <CheckBox fx:id="mutton" layoutY="72.0" mnemonicParsing="false" text="Mutton" />
+                  <CheckBox fx:id="duck" layoutY="90.0" mnemonicParsing="false" text="Duck" />
                </children>
             </Pane>
             <Pane fx:id="pane2" layoutX="231.0" layoutY="197.0">

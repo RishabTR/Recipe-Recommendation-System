@@ -13,12 +13,11 @@ import java.io.IOException;
 
 public class HomeController{
 
-    @FXML
-    private AnchorPane side_page;
 
     @FXML
-    private Button homebutton;
-
+    private Button help;
+    @FXML
+    private Button logout;
     @FXML
     private ImageView nonveg_click;
 
@@ -26,7 +25,7 @@ public class HomeController{
     private ImageView veg_click;
 
     @FXML
-    void NonVeg_Clicked(){
+    boolean NonVeg_Clicked(){
         try{
             FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("NonVegIngredient.fxml"));
             Parent loginRoot = loginLoader.load();
@@ -37,6 +36,7 @@ public class HomeController{
         catch (IOException e) {
             e.printStackTrace();
         }
+        return false;
     }
     @FXML
     void Veg_Clicked() {
@@ -50,8 +50,31 @@ public class HomeController{
         catch(IOException e) {
             e.printStackTrace();
         }
-
     }
+    @FXML
+    protected void OnClickLogout(){
+        try{
+            FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            Parent loginRoot = loginLoader.load();
+            Stage curStage = (Stage)logout.getScene().getWindow();
+            curStage.setScene(new Scene(loginRoot,730,750));
+            curStage.setTitle("Login Page");
 
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    protected void OnClickHelp(){
+        try{
+            FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("help.fxml"));
+            Parent loginRoot = loginLoader.load();
+            Stage curStage = (Stage)help.getScene().getWindow();
+            curStage.setScene(new Scene(loginRoot,730,750));
+            curStage.setTitle("Help Page");
 
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 }

@@ -6,10 +6,13 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.executables.FinalPage">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="home" layoutX="73.0" layoutY="114.0" mnemonicParsing="false" onAction="#ButtonHome" text="Home" />
+         </children></AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="407.0">
          <children>
-            <Button fx:id="clicktosee" layoutX="178.0" layoutY="128.0" mnemonicParsing="false" onAction="#ToSee" text="Click to see the selected ingredients" />
+            <Button fx:id="clicktosee" layoutX="119.0" layoutY="119.0" mnemonicParsing="false" onAction="#ToSee" text="Click to see the selected ingredients" />
          </children>
       </AnchorPane>
    </children>

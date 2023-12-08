@@ -21,24 +21,15 @@ import java.util.Map;
 import java.util.Objects;
 
 
-public class VegController{
-
-
-
-
-
+public class  VegController{
     @FXML
-    private AnchorPane side_page;
-
+    private Button home;
     @FXML
-    private Button homebutton;
-
+    private Button help;
     @FXML
-    private Button homebutton1;
-
+    private Button logout;
     @FXML
-    private Button homebutton11;
-
+    private Button process;
     @FXML
     private Pane pane6;
     @FXML
@@ -49,13 +40,15 @@ public class VegController{
     private Pane pane9;
     @FXML
     private Pane pane10;
+    db test = new db();
+    String username=LoginController.GetUserName();
+    int userid= test.GetUserId(username);
 
-    @FXML
-    private Button process;
 
 
-    public List<CheckBox> selectedCheckboxes=new ArrayList<>();
-    public List<Pane> panes = new ArrayList<>();
+
+    public static List<CheckBox> selectedCheckboxes=new ArrayList<>();
+    public static List<Pane> panes = new ArrayList<>();
     @FXML
     void initialize() {
         panes.add(pane6);
@@ -63,11 +56,21 @@ public class VegController{
         panes.add(pane8);
         panes.add(pane9);
         panes.add(pane10);
+
+        toClear();
+    }
+    protected void toClear(){
+        for(Pane i:panes){
+            for(Node node:i.getChildren()){
+                if(node instanceof CheckBox){
+                    CheckBox checkbox =(CheckBox) node;
+                    checkbox.setSelected(false);
+                }
+            }
+        }
     }
     @FXML
-    protected void handleCheckboxSelection() {
-        selectedCheckboxes.clear();
-
+    protected static List<CheckBox> handleCheckboxSelection() {
         for(Pane i:panes){
             for (Node node : i.getChildren()) {
                 if (node instanceof CheckBox) {
@@ -79,31 +82,66 @@ public class VegController{
                 }
             }
         }
+        return selectedCheckboxes;
     }
     public List<String> boxnames=new ArrayList<>();
     protected void toDisplay(){
 
         for(CheckBox iterator:selectedCheckboxes){
             String nameofcheckbox=iterator.getText();
-            boxnames.add(nameofcheckbox);
+            System.out.println(userid+" "+" "+username+" "+nameofcheckbox);
         }
     }
     @FXML
     protected void OnClickProcess(){
-        db test = new db();
-        String username=LoginController.GetUserName();
-        int userid= test.GetUserId(username);
+
         handleCheckboxSelection();
         toDisplay();
-        for (String i:boxnames){
-            System.out.println(i+" ");
-        }
+        selectedCheckboxes.clear();
         try{
             FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("finalpage.fxml"));
             Parent loginRoot = loginLoader.load();
             Stage curStage = (Stage)process.getScene().getWindow();
             curStage.setScene(new Scene(loginRoot,730,750));
             curStage.setTitle("Final Page");
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+    public void OnClickHome() {
+        try{
+            FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("Home-view.fxml"));
+            Parent loginRoot = loginLoader.load();
+            Stage curStage = (Stage)home.getScene().getWindow();
+            curStage.setScene(new Scene(loginRoot,730,750));
+            curStage.setTitle("Home Page");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    protected void OnClickLogout(){
+        try{
+            FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+            Parent loginRoot = loginLoader.load();
+            Stage curStage = (Stage)logout.getScene().getWindow();
+            curStage.setScene(new Scene(loginRoot,730,750));
+            curStage.setTitle("Login Page");
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    protected void OnClickHelp(){
+        try{
+            FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("help.fxml"));
+            Parent loginRoot = loginLoader.load();
+            Stage curStage = (Stage)help.getScene().getWindow();
+            curStage.setScene(new Scene(loginRoot,730,750));
+            curStage.setTitle("Help Page");
 
         } catch (IOException e){
             e.printStackTrace();

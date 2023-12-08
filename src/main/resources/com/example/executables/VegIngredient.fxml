@@ -17,9 +17,9 @@
          <children>
             <AnchorPane fx:id="side_page" prefHeight="582.0" prefWidth="176.0" style="-fx-background-color: Black;" styleClass="side_page">
                <children>
-                  <Button fx:id="homebutton" layoutX="32.0" layoutY="191.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: blask;" styleClass="side_page" text="Home" textFill="#ececec" />
-                  <Button fx:id="homebutton1" layoutX="34.0" layoutY="291.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Logout" textFill="#ececec" />
-                  <Button fx:id="homebutton11" layoutX="34.0" layoutY="242.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Help" textFill="#ececec" />
+                  <Button fx:id="home" layoutX="32.0" layoutY="191.0" mnemonicParsing="false" onAction="#OnClickHome" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Home" textFill="#ececec" />
+                  <Button fx:id="logout" layoutX="34.0" layoutY="291.0" mnemonicParsing="false" onAction="#OnClickLogout" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Logout" textFill="#ececec" />
+                  <Button fx:id="help" layoutX="34.0" layoutY="242.0" mnemonicParsing="false"  onAction="#OnClickHelp" prefHeight="33.0" prefWidth="146.0" style="-fx-background-color: black;" styleClass="side_page" text="Help" textFill="#ececec" />
                </children>
             </AnchorPane>
          </children>
@@ -46,7 +46,10 @@
                   <Image url="@pngtree-cereals-rice-food-rice-close-up-png-image_356672-fotor-bg-remover-20231207123937.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="62.0" layoutX="368.0" layoutY="359.0" />
+            <ImageView fitHeight="65.0" fitWidth="62.0" layoutX="368.0" layoutY="359.0">
+               <image>
+                  <Image url="@images1.png" />
+               </image></ImageView>
             <ImageView fitHeight="51.0" fitWidth="65.0" layoutX="111.0" layoutY="366.0">
                <image>
                   <Image url="@images-fotor-bg-remover-20231207143447.png" />
