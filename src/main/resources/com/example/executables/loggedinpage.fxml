@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.executables.Loggedinpage">
+   <children>
+      <TextField fx:id="label_welcome" layoutX="123.0" layoutY="124.0" prefHeight="66.0" prefWidth="338.0" text="This is the login page">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </TextField>
+      <Button fx:id="button_logout" layoutX="266.0" layoutY="271.0" mnemonicParsing="false" text="Logout">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

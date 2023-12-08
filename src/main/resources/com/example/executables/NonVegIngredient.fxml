@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.executables.NonVegController">
+   <children>
+      <VBox prefHeight="582.0" prefWidth="214.0">
+         <children>
+            <AnchorPane fx:id="side_page" prefHeight="582.0" prefWidth="176.0" styleClass="side_page">
+               <children>
+                  <Button fx:id="homebutton" layoutX="32.0" layoutY="191.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Home" textFill="#ececec" />
+                  <Button fx:id="homebutton1" layoutX="34.0" layoutY="291.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Logout" textFill="#ececec" />
+                  <Button fx:id="homebutton11" layoutX="32.0" layoutY="242.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" styleClass="side_page" text="Help" textFill="#ececec" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="582.0" prefWidth="554.0">
+         <children>
+            <Label alignment="CENTER" layoutX="60.0" layoutY="40.0" prefHeight="51.0" prefWidth="434.0" text="Non-Veg Ingredients">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="62.0" layoutX="357.0" layoutY="354.0">
+               <image>
+                  <Image url="@images1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="65.0" layoutX="88.0" layoutY="354.0">
+               <image>
+                  <Image url="@images-fotor-bg-remover-20231207143447.png" />
+               </image></ImageView>
+            <ImageView fitHeight="65.0" fitWidth="69.0" layoutX="48.0" layoutY="114.0">
+               <image>
+                  <Image url="@meat.png" />
+               </image></ImageView>
+            <ImageView fitHeight="51.0" fitWidth="66.0" layoutX="230.0" layoutY="121.0">
+               <image>
+                  <Image url="@shrimp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="69.0" layoutX="434.0" layoutY="114.0">
+               <image>
+                  <Image url="@pro.png" />
+               </image></ImageView>
+            <Pane fx:id="pane1" layoutX="47.0" layoutY="189.0">
+               <children>
+                  <CheckBox fx:id="chicken" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Chicken" />
+                  <CheckBox fx:id="beef" layoutY="18.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Beef" />
+                  <CheckBox fx:id="pork" layoutY="36.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Pork" />
+                  <CheckBox fx:id="lamb" layoutY="54.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Lamb" />
+                  <CheckBox fx:id="mutton" layoutY="72.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Mutton" />
+                  <CheckBox fx:id="duck" layoutY="90.0" mnemonicParsing="false" onAction="#handleCheckboxSelection" text="Duck" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" layoutX="231.0" layoutY="197.0">
+               <children>
+                  <CheckBox fx:id="fish" mnemonicParsing="false" text=" Fish" />
+                  <CheckBox fx:id="crab" layoutY="18.0" mnemonicParsing="false" text="Crab" />
+                  <CheckBox fx:id="lobster" layoutY="36.0" mnemonicParsing="false" text="Lobster" />
+                  <CheckBox fx:id="clams" layoutY="54.0" mnemonicParsing="false" text="Clams" />
+                  <CheckBox fx:id="shrimp" layoutY="72.0" mnemonicParsing="false" text="Shrimp" />
+                  <CheckBox fx:id="mussels" layoutY="90.0" mnemonicParsing="false" text="Mussels" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane3" layoutX="429.0" layoutY="197.0">
+               <children>
+                  <CheckBox fx:id="ghee" mnemonicParsing="false" text="Ghee" />
+                  <CheckBox fx:id="lard" layoutY="18.0" mnemonicParsing="false" text="Lard" />
+                  <CheckBox fx:id="duckfat" layoutY="36.0" mnemonicParsing="false" text="Duck Fat" />
+                  <CheckBox fx:id="chickenfat" layoutY="54.0" mnemonicParsing="false" text="Chicken Fat" />
+                  <CheckBox fx:id="beeftallow" layoutY="72.0" mnemonicParsing="false" text="Beef Tallow " />
+               </children>
+            </Pane>
+            <Pane fx:id="pane4" layoutX="92.0" layoutY="430.0">
+               <children>
+                  <CheckBox fx:id="milk" mnemonicParsing="false" text="Milk" />
+                  <CheckBox fx:id="cheese" layoutY="18.0" mnemonicParsing="false" text="Cheese" />
+                  <CheckBox fx:id="yogurt" layoutY="36.0" mnemonicParsing="false" text="Yogurt" />
+                  <CheckBox fx:id="butter" layoutY="54.0" mnemonicParsing="false" text="Butter" />
+                  <CheckBox fx:id="curd" layoutY="72.0" mnemonicParsing="false" text="Curd" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane5" layoutX="351.0" layoutY="430.0">
+               <children>
+                  <CheckBox fx:id="coriander" mnemonicParsing="false" text="Coriander" />
+                  <CheckBox fx:id="turmeric" layoutY="18.0" mnemonicParsing="false" text="Turmeric" />
+                  <CheckBox fx:id="ginger" layoutY="36.0" mnemonicParsing="false" text="Ginger" />
+                  <CheckBox fx:id="garlicpowder" layoutY="54.0" mnemonicParsing="false" text="Garlic powder" />
+                  <CheckBox fx:id="pepper" layoutY="72.0" mnemonicParsing="false" text="Peppper" />
+               </children>
+            </Pane>
+
+            <Button fx:id="process" layoutX="261.0" layoutY="552.0" mnemonicParsing="false" onAction="#OnClickProcess" text="Process" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
